@@ -1,0 +1,72 @@
+// root button styles
+
+button, input[type="button"] {
+    
+    border: none;
+    border-radius: .5em;
+    padding: 1em 2em;
+    transition: background-color, color .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        // override inline stlyes
+        background-color: darken($primary-button, 12%) !important;
+        color: $primary !important;
+        transition: background-color, color .3s ease-in-out;
+    }
+}
+
+input[type="submit"] {
+    border: none;
+    border-radius: .5em;
+    padding: 1em 2em;
+    cursor: pointer;
+
+    &:hover{
+        // override inline stlyes
+        background-color: darken($secondary-button, 12%) !important;
+        color: $secondary !important;
+        transition: background-color, color .3s ease-in-out;
+    }
+}
+
+button[disabled], input[type="button"][disabled], input[type="submit"][disabled] {
+    background-color: #5f5f5f !important;
+    color: $primary;
+    cursor: not-allowed;
+}
+
+// variant button styles - these don't change with theme
+
+.danger-btn{
+    background-color: $danger;
+    color: white;
+
+    &:hover{
+        background-color: darken($danger, 12%) !important;
+        color: darken(white, 10%) !important;
+        transition: background-color, color .3s ease-in-out;
+    }
+}
+
+.warning-btn{
+    background-color: $warning;
+    color: $secondary;
+
+    &:hover{
+        background-color: darken($warning, 12%) !important;
+        color: $secondary !important;
+        transition: background-color, color .3s ease-in-out;
+    }
+}
+
+.success-btn{
+    background-color: $success;
+    color: $secondary;
+
+    &:hover{
+        background-color: darken($success, 12%) !important;
+        color: $secondary !important;
+        transition: background-color, color .3s ease-in-out;
+    }
+}

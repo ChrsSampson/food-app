@@ -1,22 +1,8 @@
 // they are getting rid of import, this needs changed at some point to @use
-@import './colors.scss';
+@import './colors.scss', './button.scss';
 
 body{
     padding: 0;
     margin: 0;
 }
 
-button, input[type="submit"] {
-    
-    border: none;
-    border-radius: .5em;
-    padding: .5em 1em;
-    transition: background-color, color .3s ease-in-out;
-
-    &:hover{
-        // override inline stlyes
-        background-color: $accent !important;
-        color: $primary !important;
-        transition: background-color, color .3s ease-in-out;
-    }
-}

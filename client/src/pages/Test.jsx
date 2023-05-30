@@ -22,6 +22,10 @@ export default function Test () {
                 <Button onClick={toggleTheme}>Change Theme</Button>
                 <Button onClick={toggleTheme}>Change Theme with Icon <BsFillMoonFill /> </Button>
                 <Button text="Submit Button" submit />
+                <Button variant='danger' text="Danger Button" />
+                <Button variant='warning' text="Warning Button" />
+                <Button variant='success' text="Success Button" />
+                <Button disabled text="Disabled Button" />
             </div>
         </Container>
     )
