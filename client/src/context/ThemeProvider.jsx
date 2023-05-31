@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 // $primary: #bfbfbf;
 // $secondary: #1c191f;
@@ -29,7 +30,7 @@ export function ThemeProvider ({ children }) {
     }
 
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useLocalStorage('theme', 'light');
     const [isDark, setIsDark] = useState(false);
    
     const currentTheme = themeConfig[theme];
