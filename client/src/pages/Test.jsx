@@ -1,6 +1,7 @@
 // component Test
 import Button from "../components/Button";
 import Container from "../components/Container";
+import TextField from "../components/TextField";
 
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
@@ -13,12 +14,14 @@ export default function Test () {
 
     return (
         <Container>
-            <h1>Component Test</h1>
+            <h1>Buttons</h1>
 
-            <div style={{
-                display: 'flex',
-                gap: '1em'
-            }}>
+            <Container
+                sx={{
+                    display: 'flex',
+                    gap: '1em'
+                }}
+            >
                 <Button onClick={toggleTheme}>Change Theme</Button>
                 <Button onClick={toggleTheme}>Change Theme with Icon <BsFillMoonFill /> </Button>
                 <Button text="Submit Button" submit />
@@ -26,7 +29,19 @@ export default function Test () {
                 <Button variant='warning' text="Warning Button" />
                 <Button variant='success' text="Success Button" />
                 <Button disabled text="Disabled Button" />
-            </div>
+            </Container>
+            <h2>Text Fields</h2>
+            <Container sx={{
+                display: 'flex',
+                gap: '1em',
+            }}>
+                <TextField placeholder="Text Field" />
+                <TextField placeholder="Number Field" type="number" />
+                <TextField placeholder="Password Field" type="password" />
+                <TextField placeholder="Email Field" type="email" />
+                <TextField label="Label Input" />
+                <TextField label="Label Input" error />
+            </Container>
         </Container>
     )
 }
