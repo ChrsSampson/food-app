@@ -2,11 +2,18 @@
 import Button from "../components/Button";
 import Container from "../components/Container";
 import TextField from "../components/TextField";
+import Select from "../components/Select";
 
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
 
 import {BsFillSunFill, BsFillMoonFill} from 'react-icons/bs';
+
+const testSelectOptions = [
+    {label: 'Option 1', value: 'option1'},
+    {label: 'Option 2', value: 'option2'},
+    {label: 'Option 3', value: 'option3'},
+]
 
 export default function Test () {
 
@@ -32,7 +39,9 @@ export default function Test () {
             </Container>
             <h2>Text Fields</h2>
             <Container sx={{
-                display: 'flex',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateRows: 'repeat(2, 1fr)',
                 gap: '1em',
             }}>
                 <TextField placeholder="Text Field" />
@@ -41,6 +50,9 @@ export default function Test () {
                 <TextField placeholder="Email Field" type="email" />
                 <TextField label="Label Input" />
                 <TextField label="Label Input" error />
+            </Container>
+            <Container>
+                <Select options={testSelectOptions} />
             </Container>
         </Container>
     )

@@ -6,9 +6,6 @@ const placeholderOnChange = (e) => {
 
 export default function TextField({label, type='text', placeholder, value, onChange=placeholderOnChange, name, error}) {
 
-
-
-
     const input = <input
                     name={name}
                     onChange={onChange}
@@ -30,7 +27,5 @@ export default function TextField({label, type='text', placeholder, value, onCha
             input
         )
     }
-
-
 
 }

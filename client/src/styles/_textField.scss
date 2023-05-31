@@ -1,0 +1,14 @@
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"] {
+    border-radius: .25em;
+    border:2px solid;
+    padding: .5em 1em;
+    font-size: 1em;
+}
+
+.TextLable-Box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
