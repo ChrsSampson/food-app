@@ -29,6 +29,4 @@ export default function TextField({label, type='text', placeholder, value, onCha
         )
     }
 
-
-
 }
