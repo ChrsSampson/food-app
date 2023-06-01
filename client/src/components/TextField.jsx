@@ -9,7 +9,7 @@ export default function TextField({label, type='text', placeholder, value, onCha
 
     const input = <input
                     name={name}
-                    onChange={onChange}
+                    onChange={(e) => onChange(e.target.value)}
                     type={type}
                     placeholder={placeholder} 
                     value={value}

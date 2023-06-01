@@ -38,7 +38,6 @@ export default function Button({onClick=placeholderEvent, variant, children, sub
                         />
 
     const baseProps = {
-        disabled: disabled,
         onClick:onClick,
         disabled:disabled,
         whileHover:{scale: 1.1},
