@@ -1,0 +1,32 @@
+
+input[type="text"], input[type="number"],
+input[type="password"], input[type="email"]{
+    padding: .5em 1em;
+    font-size: 1.1em;
+    border:3px solid #ccc;
+    border-radius: .5em;
+    max-height: 2.5em;
+}
+
+.TextField-Error{
+    border-color: $danger !important;
+}
+
+.TextField-Label-Box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    gap:.5em;
+
+    label{
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    input{
+        padding: .5em 1em;
+        font-size: 1.1em;
+        border-radius: .5em;
+        border:3px solid #ccc;
+    }
+}
